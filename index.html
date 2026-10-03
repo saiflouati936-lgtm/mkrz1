@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MKRZ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="brand" href="index.html">
+    <svg class="crest" viewBox="0 0 40 40"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="#6f5cff" stroke-width="2"/><text x="20" y="26" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="16" fill="#f2f4fb">M</text></svg>
+    MK<em>RZ</em>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a class="active" href="index.html">الرئيسية</a>
+    <a href="gallery.html">المعرض</a>
+    <a href="friends.html">الفريق</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn" href="gallery.html">فتح المعرض</a>
+    <div id="authSlot"></div>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="القائمة">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="particles" id="particleField"></div>
+    <div>
+      <div class="eyebrow">طاقمنا الخاص — رتبتك تبدأ من الصفر</div>
+      <h1>كل صورة ترفعها تقرّبك للملك</h1>
+      <p>MKRZ مو بس معرض صور — فيه رتب تكتسبها بالمشاركة، شات حي بين الطاقم، وملك واحد يدير كل شي. ارفع، تفاعل، اطلع فوق.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="gallery.html">تصفح المعرض</a>
+        <a class="btn" href="friends.html">تعرف على الفريق</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="stat-row">
+        <div class="stat"><b id="statFilesHome">0</b><span>ملف مرفوع</span></div>
+        <div class="stat"><b id="statMembersHome">0</b><span>عضو بالطاقم</span></div>
+        <div class="stat"><b id="statMsgsHome">0</b><span>رسالة بالشات</span></div>
+      </div>
+      <div class="recent-strip" id="recentStrip">
+        <div class="recent-empty"></div><div class="recent-empty"></div><div class="recent-empty"></div><div class="recent-empty"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leaderSection" style="display:none;padding-top:0">
+    <div class="leader-card" id="leaderCard"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>وش تلقى في MKRZ</h2>
+        <p>ثلاث مساحات بسيطة، كل وحدة لها هدفها</p>
+      </div>
+    </div>
+    <div class="crew-grid" style="padding:0">
+      <div class="crew-card">
+        <div class="avatar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-4-4-9 8"/></svg>
+        </div>
+        <h3>المعرض</h3>
+        <div class="bio">ارفع وشارك الصور والفيديوهات، وفلتر عليها براحتك.</div>
+      </div>
+      <div class="crew-card">
+        <div class="avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M17 3.5a4 4 0 0 1 0 7.6"/></svg>
+        </div>
+        <h3>الفريق</h3>
+        <div class="bio">صفحة تعريفية بكل عضو ودوره في الطاقم.</div>
+      </div>
+      <div class="crew-card">
+        <div class="avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </div>
+        <h3>البحث</h3>
+        <div class="bio">دور على أي لقطة بسرعة من داخل المعرض.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="brand">MKRZ</span>
+  <span>© 2026 MKRZ — جميع الحقوق محفوظة</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
+<script src="levels.js"></script>
+<script src="auth.js"></script>
+<script src="reactions.js"></script>
+<script src="comments.js"></script>
+<script src="lightbox.js"></script>
+<script src="home.js"></script>
+<script src="chat-widget.js"></script>
+<script src="notify.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
